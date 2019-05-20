@@ -40,6 +40,71 @@ $ git remote add origin https:*//github.com/itmyhome2013/mygithub.git*
 
 $ git push -u origin master
 
+
+
+- 忽略文件：
+
+通过**.gitignore**文件忽略你不想看到的文件
+
+星号（*）匹配零个或多个任意字符；
+[abc] 匹配任何一个列在方括号中的字符（这个例子要么匹配一个 a，要么匹配一个 b，要么匹配一个 c）；
+问号（?）只匹配一个任意字符；
+如果在方括号中使用短划线分隔两个字符，表示所有在这两个字符范围内的都可以匹配（比如 [0-9] 表示匹配所有 0 到 9 的数字）。
+
+举个栗子：
+
+#忽略所有 .a 结尾的文件
+
+*.a
+
+#但 lib.a 除外
+
+!lib.a
+
+#仅仅忽略项目根目录下的 TODO 文件
+
+#不包括 subdir/TODO
+
+/TODO
+
+#忽略 build/ 目录下的所有文件
+
+build/
+
+- 删除文件：
+
+git rm to_be_deleted.txt
+
+git commit -m 'remove file'
+
+- 撤销删除：
+
+  如果文件被删除：
+
+  git checkout -- readme.txt
+
+  如果一个修改后的文件已经被暂存了，恢复到之前的状态：
+
+  git reset HEAD readme.txt
+
+  如果文件修改已经被 commit 了，如何撤销：
+
+  git commit --amend
+
+- 版本回退：
+
+工作目录中运行 git log
+
+HEAD，它指向的是最新的提交。而上一次的提交就是 HEAD^，上上次是 HEAD^^，也可以写成 HEAD~2，以此类推。之前30次版本就是 HEAD~30.
+
+要回退上一个版本，只要：
+
+git reset --hard HEAD^
+
+或提交id：
+
+git reset --hard 15547（不必输全）
+
 ## 常见问题
 
 [解决github permission denied(publickey)问题](<https://www.jianshu.com/p/f22d02c7d943>)
