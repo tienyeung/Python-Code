@@ -42,7 +42,7 @@ $ git push -u origin master
 
 
 
-- 忽略文件：
+## 忽略文件：
 
 通过**.gitignore**文件忽略你不想看到的文件
 
@@ -71,31 +71,31 @@ $ git push -u origin master
 
 build/
 
-- 删除文件：
+## 删除文件：
 
 git rm to_be_deleted.txt
 
 git commit -m 'remove file'
 
-- 撤销删除：
+## 撤销删除：
 
-  如果文件被删除：
+如果文件被删除：
 
-  git checkout -- readme.txt
+git checkout -- readme.txt
 
-  如果一个修改后的文件已经被暂存了，恢复到之前的状态：
+如果一个修改后的文件已经被暂存了，恢复到之前的状态：
 
-  git reset HEAD readme.txt
+git reset HEAD readme.txt
 
-  如果文件修改已经被 commit 了，如何撤销：
+如果文件修改已经被 commit 了，如何撤销：
 
-  git commit --amend
+git commit --amend
 
-- 版本回退：
+## 版本回退：
 
 工作目录中运行 git log
 
-HEAD，它指向的是最新的提交。而上一次的提交就是 HEAD^，上上次是 HEAD^^，也可以写成 HEAD~2，以此类推。之前30次版本就是 HEAD~30.
+HEAD，它指向的是最新的提交。而上一次的提交就是 HEAD^，上上次是 HEAD^^，也可以写成 HEAD~2，以此类推。
 
 要回退上一个版本，只要：
 
