@@ -3,6 +3,7 @@ from tkinter import *
 from tkinter import scrolledtext
 import pymysql
 import time
+import re
 
 conn = pymysql.connect(
     host='localhost',  # mysql服务器地址
@@ -45,7 +46,6 @@ class Application(Frame):
         app.bttn = Button(app, text="name->entity", command=app.cmd1)
         app.bttn.grid(row=1, column=2, ipadx=3, ipady=1,
                       sticky=W, padx=10, pady=10)
-
 
         app.bttn2 = Button(app, text="id->pre-category", command=app.cmd2)
         app.bttn2.grid(row=1, column=3, ipadx=3, ipady=1,
@@ -119,9 +119,8 @@ class Application(Frame):
 
 # 1)   Given a name, return all the entities that match the name.
 
-
     def cmd1(app):
-        sql_index= 'alter table entity add index label_index (qlabel(50))'
+        sql_index = 'alter table entity add index label_index (qlabel(50))'
         cur.execute(sql_index)
         start = time.clock()
         input1 = app.var1.get()
@@ -149,10 +148,11 @@ class Application(Frame):
 
 # 2) Given an entity, return all preceding categories (instance of and subclass of) it belongs to
 
+
     def cmd2(app):
-        sql_index_1= 'create index qid_claim_index on claim(qid)'
+        sql_index_1 = 'create index qid_claim_index on claim(qid)'
         cur.execute(sql_index_1)
-        sql_index_2= 'create index pid_property_index on property(pid)'
+        sql_index_2 = 'create index pid_property_index on property(pid)'
         cur.execute(sql_index_2)
         start = time.clock()
         input1 = app.var1.get()
@@ -165,7 +165,7 @@ class Application(Frame):
         print(rows)
         for row in rows:
             # result = '%s' + 'instance of' + 'property:'+row[0]+'\n' % input1
-            result = row[1]+' '+'property:'+row[0]+'\n' 
+            result = row[1]+' '+'property:'+row[0]+'\n'
             app.quote = result
             app.scr.insert(END, app.quote)
         end = time.clock()
@@ -174,7 +174,6 @@ class Application(Frame):
 
 
 # 3)  Given an entity, return all entities that are co-occurred with this entity in one statement.
-
 
     def cmd3(app):
         start = time.clock()
@@ -198,7 +197,6 @@ class Application(Frame):
 
 
 # 4)   Given an entity, return all the properties and statements it possesses.
-
 
     def cmd4(app):
         start = time.clock()
@@ -225,8 +223,12 @@ class Application(Frame):
     def cmd5(app):
         start = time.clock()
         input1 = app.var1.get()
+        regex = re.compile(r'(.*) OF (.*)')
+        mo = regex.search(input1)
+        input_2 = mo.group(1)
+        input_3 = mo.group(2)
         sql = 'select datavalue_value from claim where pid in (select pid from property where plabel like "%%%%%s%%%%%%") and qid in (select qid from entity where qlabel like "%%%%%s%%%%%%")' % (
-            input1)
+            input_2, input_3)
         cur.execute(sql)
         rows = cur.fetchall()
     #print (rows)
@@ -243,7 +245,7 @@ class Application(Frame):
         app.scr1.insert(END, app.time)
 
 
-#index
+# index
     # def cmd6(app):
     #     # sql_index= 'alter table entity add index label_index (qlabel(88))'
     #     # cur.execute(sql_index)
@@ -286,7 +288,7 @@ class Application(Frame):
     #     print(rows)
     #     for row in rows:
     #         # result = '%s' + 'instance of' + 'property:'+row[0]+'\n' % input1
-    #         result = row[1]+' '+'property:'+row[0]+'\n' 
+    #         result = row[1]+' '+'property:'+row[0]+'\n'
     #         app.quote = result
     #         app.scr.insert(END, app.quote)
     #     end = time.clock()
@@ -314,7 +316,7 @@ class Application(Frame):
     #     #print("cost time:")
     #     app.time = end-start
     #     app.scr1.insert(END, app.time)
-    
+
     # def cmd9(app):
     #     start = time.clock()
     #     input1 = app.var1.get()
