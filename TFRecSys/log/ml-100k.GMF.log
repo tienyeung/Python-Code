@@ -1,0 +1,470 @@
+############################################### 
+n_negative=4  
+batch_size=64 
+embed_dim=8 
+############################################### 
+Iter 1...	Training loss: 153.014038  in 3.93s 
+Top-1 Recall: 0.018028 Precision: 0.018028 NDCG: 0.018028 HR:0.018028
+Top-5 Recall: 0.073171 Precision: 0.014634 NDCG: 0.045720 HR:0.073171
+Top-10 Recall: 0.109226 Precision: 0.010923 NDCG: 0.057090 HR:0.109226
+Eval costs: 0.300798 s
+Iter 2...	Training loss: 160.629013  in 2.55s 
+Top-1 Recall: 0.018028 Precision: 0.018028 NDCG: 0.018028 HR:0.018028
+Top-5 Recall: 0.072110 Precision: 0.014422 NDCG: 0.046058 HR:0.072110
+Top-10 Recall: 0.104984 Precision: 0.010498 NDCG: 0.056745 HR:0.104984
+Eval costs: 0.143347 s
+Iter 3...	Training loss: 172.643753  in 3.64s 
+Top-1 Recall: 0.021209 Precision: 0.021209 NDCG: 0.021209 HR:0.021209
+Top-5 Recall: 0.072110 Precision: 0.014422 NDCG: 0.046235 HR:0.072110
+Top-10 Recall: 0.117709 Precision: 0.011771 NDCG: 0.061086 HR:0.117709
+Eval costs: 0.204566 s
+Iter 4...	Training loss: 184.759369  in 2.22s 
+Top-1 Recall: 0.025451 Precision: 0.025451 NDCG: 0.025451 HR:0.025451
+Top-5 Recall: 0.076352 Precision: 0.015270 NDCG: 0.050716 HR:0.076352
+Top-10 Recall: 0.125133 Precision: 0.012513 NDCG: 0.066561 HR:0.125133
+Eval costs: 0.205519 s
+Iter 5...	Training loss: 153.073486  in 3.77s 
+Top-1 Recall: 0.032874 Precision: 0.032874 NDCG: 0.032874 HR:0.032874
+Top-5 Recall: 0.112407 Precision: 0.022481 NDCG: 0.071823 HR:0.112407
+Top-10 Recall: 0.155885 Precision: 0.015589 NDCG: 0.085846 HR:0.155885
+Eval costs: 0.275328 s
+Iter 6...	Training loss: 137.884171  in 3.77s 
+Top-1 Recall: 0.046660 Precision: 0.046660 NDCG: 0.046660 HR:0.046660
+Top-5 Recall: 0.125133 Precision: 0.025027 NDCG: 0.085966 HR:0.125133
+Top-10 Recall: 0.179215 Precision: 0.017922 NDCG: 0.103416 HR:0.179215
+Eval costs: 0.274732 s
+Iter 7...	Training loss: 142.762848  in 3.96s 
+Top-1 Recall: 0.045599 Precision: 0.045599 NDCG: 0.045599 HR:0.045599
+Top-5 Recall: 0.148462 Precision: 0.029692 NDCG: 0.096986 HR:0.148462
+Top-10 Recall: 0.203606 Precision: 0.020361 NDCG: 0.114793 HR:0.203606
+Eval costs: 0.284251 s
+Iter 8...	Training loss: 151.380035  in 2.52s 
+Top-1 Recall: 0.057264 Precision: 0.057264 NDCG: 0.057264 HR:0.057264
+Top-5 Recall: 0.163309 Precision: 0.032662 NDCG: 0.110713 HR:0.163309
+Top-10 Recall: 0.225875 Precision: 0.022587 NDCG: 0.130629 HR:0.225875
+Eval costs: 0.129192 s
+Iter 9...	Training loss: 117.366943  in 2.32s 
+Top-1 Recall: 0.058324 Precision: 0.058324 NDCG: 0.058324 HR:0.058324
+Top-5 Recall: 0.162248 Precision: 0.032450 NDCG: 0.111036 HR:0.162248
+Top-10 Recall: 0.236479 Precision: 0.023648 NDCG: 0.134850 HR:0.236479
+Eval costs: 0.146163 s
+Iter 10...	Training loss: 128.272354  in 2.76s 
+Top-1 Recall: 0.068929 Precision: 0.068929 NDCG: 0.068929 HR:0.068929
+Top-5 Recall: 0.164369 Precision: 0.032874 NDCG: 0.117240 HR:0.164369
+Top-10 Recall: 0.239661 Precision: 0.023966 NDCG: 0.141709 HR:0.239661
+Eval costs: 0.189469 s
+Iter 11...	Training loss: 141.399445  in 3.43s 
+Top-1 Recall: 0.064687 Precision: 0.064687 NDCG: 0.064687 HR:0.064687
+Top-5 Recall: 0.180276 Precision: 0.036055 NDCG: 0.124415 HR:0.180276
+Top-10 Recall: 0.249205 Precision: 0.024920 NDCG: 0.146272 HR:0.249205
+Eval costs: 0.123140 s
+Iter 12...	Training loss: 112.902206  in 3.29s 
+Top-1 Recall: 0.068929 Precision: 0.068929 NDCG: 0.068929 HR:0.068929
+Top-5 Recall: 0.185578 Precision: 0.037116 NDCG: 0.127652 HR:0.185578
+Top-10 Recall: 0.255567 Precision: 0.025557 NDCG: 0.150071 HR:0.255567
+Eval costs: 0.209178 s
+Iter 13...	Training loss: 147.986343  in 3.51s 
+Top-1 Recall: 0.071050 Precision: 0.071050 NDCG: 0.071050 HR:0.071050
+Top-5 Recall: 0.183457 Precision: 0.036691 NDCG: 0.127089 HR:0.183457
+Top-10 Recall: 0.259809 Precision: 0.025981 NDCG: 0.151605 HR:0.259809
+Eval costs: 0.273257 s
+Iter 14...	Training loss: 105.797447  in 3.75s 
+Top-1 Recall: 0.071050 Precision: 0.071050 NDCG: 0.071050 HR:0.071050
+Top-5 Recall: 0.184517 Precision: 0.036903 NDCG: 0.128969 HR:0.184517
+Top-10 Recall: 0.266172 Precision: 0.026617 NDCG: 0.155227 HR:0.266172
+Eval costs: 0.279743 s
+Iter 15...	Training loss: 105.412186  in 3.70s 
+Top-1 Recall: 0.072110 Precision: 0.072110 NDCG: 0.072110 HR:0.072110
+Top-5 Recall: 0.177094 Precision: 0.035419 NDCG: 0.125408 HR:0.177094
+Top-10 Recall: 0.261930 Precision: 0.026193 NDCG: 0.152797 HR:0.261930
+Eval costs: 0.278264 s
+Iter 16...	Training loss: 131.093781  in 3.70s 
+Top-1 Recall: 0.074231 Precision: 0.074231 NDCG: 0.074231 HR:0.074231
+Top-5 Recall: 0.186638 Precision: 0.037328 NDCG: 0.130300 HR:0.186638
+Top-10 Recall: 0.266172 Precision: 0.026617 NDCG: 0.155744 HR:0.266172
+Eval costs: 0.277090 s
+Iter 17...	Training loss: 100.982155  in 3.81s 
+Top-1 Recall: 0.074231 Precision: 0.074231 NDCG: 0.074231 HR:0.074231
+Top-5 Recall: 0.195122 Precision: 0.039024 NDCG: 0.136279 HR:0.195122
+Top-10 Recall: 0.259809 Precision: 0.025981 NDCG: 0.157262 HR:0.259809
+Eval costs: 0.276736 s
+Iter 18...	Training loss: 101.785278  in 3.64s 
+Top-1 Recall: 0.073171 Precision: 0.073171 NDCG: 0.073171 HR:0.073171
+Top-5 Recall: 0.186638 Precision: 0.037328 NDCG: 0.132317 HR:0.186638
+Top-10 Recall: 0.276776 Precision: 0.027678 NDCG: 0.161210 HR:0.276776
+Eval costs: 0.274822 s
+Iter 19...	Training loss: 112.020905  in 3.84s 
+Top-1 Recall: 0.077413 Precision: 0.077413 NDCG: 0.077413 HR:0.077413
+Top-5 Recall: 0.194062 Precision: 0.038812 NDCG: 0.137502 HR:0.194062
+Top-10 Recall: 0.276776 Precision: 0.027678 NDCG: 0.164094 HR:0.276776
+Eval costs: 0.285760 s
+Iter 20...	Training loss: 151.840881  in 2.59s 
+Top-1 Recall: 0.073171 Precision: 0.073171 NDCG: 0.073171 HR:0.073171
+Top-5 Recall: 0.194062 Precision: 0.038812 NDCG: 0.135272 HR:0.194062
+Top-10 Recall: 0.265111 Precision: 0.026511 NDCG: 0.157988 HR:0.265111
+Eval costs: 0.194480 s
+Iter 21...	Training loss: 119.142136  in 2.45s 
+Top-1 Recall: 0.072110 Precision: 0.072110 NDCG: 0.072110 HR:0.072110
+Top-5 Recall: 0.189820 Precision: 0.037964 NDCG: 0.133878 HR:0.189820
+Top-10 Recall: 0.268293 Precision: 0.026829 NDCG: 0.158767 HR:0.268293
+Eval costs: 0.126336 s
+Iter 22...	Training loss: 123.263718  in 3.75s 
+Top-1 Recall: 0.073171 Precision: 0.073171 NDCG: 0.073171 HR:0.073171
+Top-5 Recall: 0.195122 Precision: 0.039024 NDCG: 0.137550 HR:0.195122
+Top-10 Recall: 0.262990 Precision: 0.026299 NDCG: 0.159428 HR:0.262990
+Eval costs: 0.275540 s
+Iter 23...	Training loss: 121.278885  in 3.32s 
+Top-1 Recall: 0.074231 Precision: 0.074231 NDCG: 0.074231 HR:0.074231
+Top-5 Recall: 0.196182 Precision: 0.039236 NDCG: 0.138018 HR:0.196182
+Top-10 Recall: 0.273595 Precision: 0.027359 NDCG: 0.162901 HR:0.273595
+Eval costs: 0.212564 s
+Iter 24...	Training loss: 126.810379  in 3.65s 
+Top-1 Recall: 0.079533 Precision: 0.079533 NDCG: 0.079533 HR:0.079533
+Top-5 Recall: 0.195122 Precision: 0.039024 NDCG: 0.139104 HR:0.195122
+Top-10 Recall: 0.278897 Precision: 0.027890 NDCG: 0.166368 HR:0.278897
+Eval costs: 0.279660 s
+Iter 25...	Training loss: 121.677658  in 3.61s 
+Top-1 Recall: 0.075292 Precision: 0.075292 NDCG: 0.075292 HR:0.075292
+Top-5 Recall: 0.193001 Precision: 0.038600 NDCG: 0.136049 HR:0.193001
+Top-10 Recall: 0.291622 Precision: 0.029162 NDCG: 0.167916 HR:0.291622
+Eval costs: 0.133055 s
+Iter 26...	Training loss: 118.180435  in 2.61s 
+Top-1 Recall: 0.074231 Precision: 0.074231 NDCG: 0.074231 HR:0.074231
+Top-5 Recall: 0.196182 Precision: 0.039236 NDCG: 0.137759 HR:0.196182
+Top-10 Recall: 0.284199 Precision: 0.028420 NDCG: 0.166055 HR:0.284199
+Eval costs: 0.125334 s
+Iter 27...	Training loss: 114.824150  in 3.63s 
+Top-1 Recall: 0.066808 Precision: 0.066808 NDCG: 0.066808 HR:0.066808
+Top-5 Recall: 0.185578 Precision: 0.037116 NDCG: 0.128514 HR:0.185578
+Top-10 Recall: 0.278897 Precision: 0.027890 NDCG: 0.158344 HR:0.278897
+Eval costs: 0.213486 s
+Iter 28...	Training loss: 104.228897  in 3.72s 
+Top-1 Recall: 0.067869 Precision: 0.067869 NDCG: 0.067869 HR:0.067869
+Top-5 Recall: 0.199364 Precision: 0.039873 NDCG: 0.136108 HR:0.199364
+Top-10 Recall: 0.281018 Precision: 0.028102 NDCG: 0.162298 HR:0.281018
+Eval costs: 0.218582 s
+Iter 29...	Training loss: 136.097610  in 3.23s 
+Top-1 Recall: 0.071050 Precision: 0.071050 NDCG: 0.071050 HR:0.071050
+Top-5 Recall: 0.196182 Precision: 0.039236 NDCG: 0.136043 HR:0.196182
+Top-10 Recall: 0.288441 Precision: 0.028844 NDCG: 0.165730 HR:0.288441
+Eval costs: 0.184490 s
+Iter 30...	Training loss: 117.451279  in 2.26s 
+Top-1 Recall: 0.079533 Precision: 0.079533 NDCG: 0.079533 HR:0.079533
+Top-5 Recall: 0.191941 Precision: 0.038388 NDCG: 0.137904 HR:0.191941
+Top-10 Recall: 0.287381 Precision: 0.028738 NDCG: 0.168654 HR:0.287381
+Eval costs: 0.131291 s
+embed_dim=16 
+############################################### 
+Iter 1...	Training loss: 205.443420  in 2.34s 
+Top-1 Recall: 0.025451 Precision: 0.025451 NDCG: 0.025451 HR:0.025451
+Top-5 Recall: 0.066808 Precision: 0.013362 NDCG: 0.045962 HR:0.066808
+Top-10 Recall: 0.103924 Precision: 0.010392 NDCG: 0.058056 HR:0.103924
+Eval costs: 0.191440 s
+Iter 2...	Training loss: 179.483704  in 2.58s 
+Top-1 Recall: 0.022269 Precision: 0.022269 NDCG: 0.022269 HR:0.022269
+Top-5 Recall: 0.074231 Precision: 0.014846 NDCG: 0.047114 HR:0.074231
+Top-10 Recall: 0.119830 Precision: 0.011983 NDCG: 0.062022 HR:0.119830
+Eval costs: 0.173378 s
+############################################### 
+n_negative=4  
+batch_size=64 
+############################################### 
+n_negative=4  
+batch_size=64 
+############################################### 
+n_negative=4  
+batch_size=64 
+embed_dim=8 
+############################################### 
+Iter 1...	Training loss: 407.831177  in 3.27s 
+Top-1 Recall: 0.019088 Precision: 0.019088 NDCG: 0.019088 HR:0.019088
+Top-5 Recall: 0.075292 Precision: 0.015058 NDCG: 0.046433 HR:0.075292
+Top-10 Recall: 0.124072 Precision: 0.012407 NDCG: 0.062146 HR:0.124072
+Eval costs: 0.296501 s
+Iter 2...	Training loss: 338.979706  in 3.71s 
+Top-1 Recall: 0.023330 Precision: 0.023330 NDCG: 0.023330 HR:0.023330
+Top-5 Recall: 0.094380 Precision: 0.018876 NDCG: 0.056801 HR:0.094380
+Top-10 Recall: 0.136797 Precision: 0.013680 NDCG: 0.070537 HR:0.136797
+Eval costs: 0.261452 s
+Iter 3...	Training loss: 308.377808  in 4.05s 
+Top-1 Recall: 0.034995 Precision: 0.034995 NDCG: 0.034995 HR:0.034995
+Top-5 Recall: 0.109226 Precision: 0.021845 NDCG: 0.072984 HR:0.109226
+Top-10 Recall: 0.163309 Precision: 0.016331 NDCG: 0.090849 HR:0.163309
+Eval costs: 0.267387 s
+Iter 4...	Training loss: 292.300385  in 2.76s 
+Top-1 Recall: 0.043478 Precision: 0.043478 NDCG: 0.043478 HR:0.043478
+Top-5 Recall: 0.142100 Precision: 0.028420 NDCG: 0.093362 HR:0.142100
+Top-10 Recall: 0.215270 Precision: 0.021527 NDCG: 0.117005 HR:0.215270
+Eval costs: 0.169089 s
+Iter 5...	Training loss: 282.306183  in 2.40s 
+Top-1 Recall: 0.047720 Precision: 0.047720 NDCG: 0.047720 HR:0.047720
+Top-5 Recall: 0.162248 Precision: 0.032450 NDCG: 0.105578 HR:0.162248
+Top-10 Recall: 0.231177 Precision: 0.023118 NDCG: 0.127693 HR:0.231177
+Eval costs: 0.121334 s
+Iter 6...	Training loss: 306.816559  in 3.07s 
+Top-1 Recall: 0.057264 Precision: 0.057264 NDCG: 0.057264 HR:0.057264
+Top-5 Recall: 0.162248 Precision: 0.032450 NDCG: 0.109194 HR:0.162248
+Top-10 Recall: 0.234358 Precision: 0.023436 NDCG: 0.132403 HR:0.234358
+Eval costs: 0.208553 s
+Iter 7...	Training loss: 296.198547  in 3.01s 
+Top-1 Recall: 0.060445 Precision: 0.060445 NDCG: 0.060445 HR:0.060445
+Top-5 Recall: 0.162248 Precision: 0.032450 NDCG: 0.113111 HR:0.162248
+Top-10 Recall: 0.234358 Precision: 0.023436 NDCG: 0.136377 HR:0.234358
+Eval costs: 0.210470 s
+Iter 8...	Training loss: 245.331177  in 3.86s 
+Top-1 Recall: 0.058324 Precision: 0.058324 NDCG: 0.058324 HR:0.058324
+Top-5 Recall: 0.167550 Precision: 0.033510 NDCG: 0.114741 HR:0.167550
+Top-10 Recall: 0.239661 Precision: 0.023966 NDCG: 0.137913 HR:0.239661
+Eval costs: 0.274707 s
+Iter 9...	Training loss: 270.119385  in 2.21s 
+Top-1 Recall: 0.063627 Precision: 0.063627 NDCG: 0.063627 HR:0.063627
+Top-5 Recall: 0.173913 Precision: 0.034783 NDCG: 0.120405 HR:0.173913
+Top-10 Recall: 0.241782 Precision: 0.024178 NDCG: 0.142252 HR:0.241782
+Eval costs: 0.124268 s
+Iter 10...	Training loss: 259.742615  in 3.52s 
+Top-1 Recall: 0.058324 Precision: 0.058324 NDCG: 0.058324 HR:0.058324
+Top-5 Recall: 0.179215 Precision: 0.035843 NDCG: 0.119522 HR:0.179215
+Top-10 Recall: 0.248144 Precision: 0.024814 NDCG: 0.141555 HR:0.248144
+Eval costs: 0.278255 s
+Iter 11...	Training loss: 258.028259  in 3.43s 
+Top-1 Recall: 0.064687 Precision: 0.064687 NDCG: 0.064687 HR:0.064687
+Top-5 Recall: 0.179215 Precision: 0.035843 NDCG: 0.123790 HR:0.179215
+Top-10 Recall: 0.250265 Precision: 0.025027 NDCG: 0.146956 HR:0.250265
+Eval costs: 0.211507 s
+Iter 12...	Training loss: 263.336426  in 3.78s 
+Top-1 Recall: 0.064687 Precision: 0.064687 NDCG: 0.064687 HR:0.064687
+Top-5 Recall: 0.184517 Precision: 0.036903 NDCG: 0.125768 HR:0.184517
+Top-10 Recall: 0.254507 Precision: 0.025451 NDCG: 0.148492 HR:0.254507
+Eval costs: 0.276025 s
+Iter 13...	Training loss: 267.590759  in 2.54s 
+Top-1 Recall: 0.058324 Precision: 0.058324 NDCG: 0.058324 HR:0.058324
+Top-5 Recall: 0.185578 Precision: 0.037116 NDCG: 0.124756 HR:0.185578
+Top-10 Recall: 0.256628 Precision: 0.025663 NDCG: 0.147680 HR:0.256628
+Eval costs: 0.142484 s
+Iter 14...	Training loss: 259.896332  in 2.36s 
+Top-1 Recall: 0.065748 Precision: 0.065748 NDCG: 0.065748 HR:0.065748
+Top-5 Recall: 0.181336 Precision: 0.036267 NDCG: 0.124873 HR:0.181336
+Top-10 Recall: 0.265111 Precision: 0.026511 NDCG: 0.151932 HR:0.265111
+Eval costs: 0.139382 s
+Iter 15...	Training loss: 230.584366  in 3.11s 
+Top-1 Recall: 0.069989 Precision: 0.069989 NDCG: 0.069989 HR:0.069989
+Top-5 Recall: 0.180276 Precision: 0.036055 NDCG: 0.126788 HR:0.180276
+Top-10 Recall: 0.265111 Precision: 0.026511 NDCG: 0.154016 HR:0.265111
+Eval costs: 0.222090 s
+Iter 16...	Training loss: 230.595352  in 2.39s 
+Top-1 Recall: 0.064687 Precision: 0.064687 NDCG: 0.064687 HR:0.064687
+Top-5 Recall: 0.178155 Precision: 0.035631 NDCG: 0.121435 HR:0.178155
+Top-10 Recall: 0.264051 Precision: 0.026405 NDCG: 0.149301 HR:0.264051
+Eval costs: 0.126323 s
+Iter 17...	Training loss: 269.004608  in 2.65s 
+Top-1 Recall: 0.072110 Precision: 0.072110 NDCG: 0.072110 HR:0.072110
+Top-5 Recall: 0.188759 Precision: 0.037752 NDCG: 0.129966 HR:0.188759
+Top-10 Recall: 0.271474 Precision: 0.027147 NDCG: 0.156638 HR:0.271474
+Eval costs: 0.137322 s
+Iter 18...	Training loss: 212.205612  in 2.76s 
+Top-1 Recall: 0.065748 Precision: 0.065748 NDCG: 0.065748 HR:0.065748
+Top-5 Recall: 0.180276 Precision: 0.036055 NDCG: 0.126370 HR:0.180276
+Top-10 Recall: 0.270414 Precision: 0.027041 NDCG: 0.155572 HR:0.270414
+Eval costs: 0.139102 s
+Iter 19...	Training loss: 278.591980  in 2.19s 
+Top-1 Recall: 0.066808 Precision: 0.066808 NDCG: 0.066808 HR:0.066808
+Top-5 Recall: 0.180276 Precision: 0.036055 NDCG: 0.125847 HR:0.180276
+Top-10 Recall: 0.267232 Precision: 0.026723 NDCG: 0.153869 HR:0.267232
+Eval costs: 0.138365 s
+Iter 20...	Training loss: 263.238861  in 2.94s 
+Top-1 Recall: 0.061506 Precision: 0.061506 NDCG: 0.061506 HR:0.061506
+Top-5 Recall: 0.185578 Precision: 0.037116 NDCG: 0.126393 HR:0.185578
+Top-10 Recall: 0.265111 Precision: 0.026511 NDCG: 0.151961 HR:0.265111
+Eval costs: 0.131377 s
+Iter 21...	Training loss: 251.753479  in 3.01s 
+Top-1 Recall: 0.069989 Precision: 0.069989 NDCG: 0.069989 HR:0.069989
+Top-5 Recall: 0.181336 Precision: 0.036267 NDCG: 0.126108 HR:0.181336
+Top-10 Recall: 0.260870 Precision: 0.026087 NDCG: 0.151792 HR:0.260870
+Eval costs: 0.134355 s
+Iter 22...	Training loss: 235.209045  in 2.24s 
+Top-1 Recall: 0.069989 Precision: 0.069989 NDCG: 0.069989 HR:0.069989
+Top-5 Recall: 0.183457 Precision: 0.036691 NDCG: 0.128295 HR:0.183457
+Top-10 Recall: 0.273595 Precision: 0.027359 NDCG: 0.157159 HR:0.273595
+Eval costs: 0.197526 s
+Iter 23...	Training loss: 287.938232  in 2.17s 
+Top-1 Recall: 0.067869 Precision: 0.067869 NDCG: 0.067869 HR:0.067869
+Top-5 Recall: 0.184517 Precision: 0.036903 NDCG: 0.128720 HR:0.184517
+Top-10 Recall: 0.274655 Precision: 0.027466 NDCG: 0.157676 HR:0.274655
+Eval costs: 0.127339 s
+Iter 24...	Training loss: 246.677399  in 2.29s 
+Top-1 Recall: 0.061506 Precision: 0.061506 NDCG: 0.061506 HR:0.061506
+Top-5 Recall: 0.185578 Precision: 0.037116 NDCG: 0.126745 HR:0.185578
+Top-10 Recall: 0.277837 Precision: 0.027784 NDCG: 0.156406 HR:0.277837
+Eval costs: 0.171254 s
+Iter 25...	Training loss: 250.088226  in 2.95s 
+Top-1 Recall: 0.069989 Precision: 0.069989 NDCG: 0.069989 HR:0.069989
+Top-5 Recall: 0.189820 Precision: 0.037964 NDCG: 0.131220 HR:0.189820
+Top-10 Recall: 0.272534 Precision: 0.027253 NDCG: 0.157775 HR:0.272534
+Eval costs: 0.154282 s
+Iter 26...	Training loss: 211.744629  in 2.60s 
+Top-1 Recall: 0.069989 Precision: 0.069989 NDCG: 0.069989 HR:0.069989
+Top-5 Recall: 0.186638 Precision: 0.037328 NDCG: 0.131321 HR:0.186638
+Top-10 Recall: 0.271474 Precision: 0.027147 NDCG: 0.158278 HR:0.271474
+Eval costs: 0.138368 s
+Iter 27...	Training loss: 181.457275  in 2.19s 
+Top-1 Recall: 0.059385 Precision: 0.059385 NDCG: 0.059385 HR:0.059385
+Top-5 Recall: 0.186638 Precision: 0.037328 NDCG: 0.126733 HR:0.186638
+Top-10 Recall: 0.274655 Precision: 0.027466 NDCG: 0.154935 HR:0.274655
+Eval costs: 0.126440 s
+Iter 28...	Training loss: 196.810852  in 2.65s 
+Top-1 Recall: 0.067869 Precision: 0.067869 NDCG: 0.067869 HR:0.067869
+Top-5 Recall: 0.188759 Precision: 0.037752 NDCG: 0.130934 HR:0.188759
+Top-10 Recall: 0.273595 Precision: 0.027359 NDCG: 0.158116 HR:0.273595
+Eval costs: 0.130347 s
+Iter 29...	Training loss: 278.695160  in 2.12s 
+Top-1 Recall: 0.073171 Precision: 0.073171 NDCG: 0.073171 HR:0.073171
+Top-5 Recall: 0.183457 Precision: 0.036691 NDCG: 0.132363 HR:0.183457
+Top-10 Recall: 0.271474 Precision: 0.027147 NDCG: 0.160865 HR:0.271474
+Eval costs: 0.127048 s
+Iter 30...	Training loss: 244.620758  in 3.64s 
+Top-1 Recall: 0.071050 Precision: 0.071050 NDCG: 0.071050 HR:0.071050
+Top-5 Recall: 0.190880 Precision: 0.038176 NDCG: 0.133046 HR:0.190880
+Top-10 Recall: 0.275716 Precision: 0.027572 NDCG: 0.160716 HR:0.275716
+Eval costs: 0.128309 s
+embed_dim=16 
+############################################### 
+Iter 1...	Training loss: 373.747772  in 3.11s 
+Top-1 Recall: 0.023330 Precision: 0.023330 NDCG: 0.023330 HR:0.023330
+Top-5 Recall: 0.092259 Precision: 0.018452 NDCG: 0.056967 HR:0.092259
+Top-10 Recall: 0.141039 Precision: 0.014104 NDCG: 0.072741 HR:0.141039
+Eval costs: 0.199298 s
+Iter 2...	Training loss: 336.175842  in 2.59s 
+Top-1 Recall: 0.043478 Precision: 0.043478 NDCG: 0.043478 HR:0.043478
+Top-5 Recall: 0.127253 Precision: 0.025451 NDCG: 0.086196 HR:0.127253
+Top-10 Recall: 0.184517 Precision: 0.018452 NDCG: 0.104811 HR:0.184517
+Eval costs: 0.175350 s
+Iter 3...	Training loss: 299.792969  in 3.16s 
+Top-1 Recall: 0.054083 Precision: 0.054083 NDCG: 0.054083 HR:0.054083
+Top-5 Recall: 0.142100 Precision: 0.028420 NDCG: 0.097858 HR:0.142100
+Top-10 Recall: 0.223754 Precision: 0.022375 NDCG: 0.123935 HR:0.223754
+Eval costs: 0.208227 s
+Iter 4...	Training loss: 308.288818  in 2.30s 
+Top-1 Recall: 0.054083 Precision: 0.054083 NDCG: 0.054083 HR:0.054083
+Top-5 Recall: 0.142100 Precision: 0.028420 NDCG: 0.099204 HR:0.142100
+Top-10 Recall: 0.216331 Precision: 0.021633 NDCG: 0.123257 HR:0.216331
+Eval costs: 0.176663 s
+Iter 5...	Training loss: 235.781342  in 3.84s 
+Top-1 Recall: 0.056204 Precision: 0.056204 NDCG: 0.056204 HR:0.056204
+Top-5 Recall: 0.162248 Precision: 0.032450 NDCG: 0.109625 HR:0.162248
+Top-10 Recall: 0.232238 Precision: 0.023224 NDCG: 0.131862 HR:0.232238
+Eval costs: 0.357847 s
+Iter 6...	Training loss: 269.286621  in 2.64s 
+Top-1 Recall: 0.062566 Precision: 0.062566 NDCG: 0.062566 HR:0.062566
+Top-5 Recall: 0.163309 Precision: 0.032662 NDCG: 0.113889 HR:0.163309
+Top-10 Recall: 0.241782 Precision: 0.024178 NDCG: 0.138857 HR:0.241782
+Eval costs: 0.177471 s
+Iter 7...	Training loss: 271.509827  in 2.51s 
+Top-1 Recall: 0.067869 Precision: 0.067869 NDCG: 0.067869 HR:0.067869
+Top-5 Recall: 0.176034 Precision: 0.035207 NDCG: 0.122426 HR:0.176034
+Top-10 Recall: 0.246023 Precision: 0.024602 NDCG: 0.144843 HR:0.246023
+Eval costs: 0.253674 s
+Iter 8...	Training loss: 235.180786  in 2.34s 
+Top-1 Recall: 0.060445 Precision: 0.060445 NDCG: 0.060445 HR:0.060445
+Top-5 Recall: 0.180276 Precision: 0.036055 NDCG: 0.121927 HR:0.180276
+Top-10 Recall: 0.243902 Precision: 0.024390 NDCG: 0.142257 HR:0.243902
+Eval costs: 0.182410 s
+Iter 9...	Training loss: 247.408463  in 2.93s 
+Top-1 Recall: 0.063627 Precision: 0.063627 NDCG: 0.063627 HR:0.063627
+Top-5 Recall: 0.179215 Precision: 0.035843 NDCG: 0.122309 HR:0.179215
+Top-10 Recall: 0.260870 Precision: 0.026087 NDCG: 0.148540 HR:0.260870
+Eval costs: 0.217372 s
+Iter 10...	Training loss: 233.702759  in 3.54s 
+Top-1 Recall: 0.063627 Precision: 0.063627 NDCG: 0.063627 HR:0.063627
+Top-5 Recall: 0.176034 Precision: 0.035207 NDCG: 0.120888 HR:0.176034
+Top-10 Recall: 0.257688 Precision: 0.025769 NDCG: 0.146588 HR:0.257688
+Eval costs: 0.184490 s
+Iter 11...	Training loss: 234.017883  in 2.42s 
+Top-1 Recall: 0.065748 Precision: 0.065748 NDCG: 0.065748 HR:0.065748
+Top-5 Recall: 0.178155 Precision: 0.035631 NDCG: 0.122527 HR:0.178155
+Top-10 Recall: 0.257688 Precision: 0.025769 NDCG: 0.148231 HR:0.257688
+Eval costs: 0.181480 s
+Iter 12...	Training loss: 304.534851  in 3.82s 
+Top-1 Recall: 0.069989 Precision: 0.069989 NDCG: 0.069989 HR:0.069989
+Top-5 Recall: 0.184517 Precision: 0.036903 NDCG: 0.127857 HR:0.184517
+Top-10 Recall: 0.271474 Precision: 0.027147 NDCG: 0.155902 HR:0.271474
+Eval costs: 0.381985 s
+Iter 13...	Training loss: 233.904266  in 3.77s 
+Top-1 Recall: 0.073171 Precision: 0.073171 NDCG: 0.073171 HR:0.073171
+Top-5 Recall: 0.190880 Precision: 0.038176 NDCG: 0.131207 HR:0.190880
+Top-10 Recall: 0.276776 Precision: 0.027678 NDCG: 0.158672 HR:0.276776
+Eval costs: 0.276528 s
+Iter 14...	Training loss: 176.578247  in 2.46s 
+Top-1 Recall: 0.067869 Precision: 0.067869 NDCG: 0.067869 HR:0.067869
+Top-5 Recall: 0.186638 Precision: 0.037328 NDCG: 0.127887 HR:0.186638
+Top-10 Recall: 0.274655 Precision: 0.027466 NDCG: 0.155800 HR:0.274655
+Eval costs: 0.191509 s
+Iter 15...	Training loss: 207.240128  in 3.63s 
+Top-1 Recall: 0.073171 Precision: 0.073171 NDCG: 0.073171 HR:0.073171
+Top-5 Recall: 0.182397 Precision: 0.036479 NDCG: 0.129585 HR:0.182397
+Top-10 Recall: 0.276776 Precision: 0.027678 NDCG: 0.160004 HR:0.276776
+Eval costs: 0.242486 s
+Iter 16...	Training loss: 226.897629  in 2.57s 
+Top-1 Recall: 0.073171 Precision: 0.073171 NDCG: 0.073171 HR:0.073171
+Top-5 Recall: 0.183457 Precision: 0.036691 NDCG: 0.129441 HR:0.183457
+Top-10 Recall: 0.270414 Precision: 0.027041 NDCG: 0.157453 HR:0.270414
+Eval costs: 0.244447 s
+Iter 17...	Training loss: 204.744507  in 2.97s 
+Top-1 Recall: 0.075292 Precision: 0.075292 NDCG: 0.075292 HR:0.075292
+Top-5 Recall: 0.177094 Precision: 0.035419 NDCG: 0.127744 HR:0.177094
+Top-10 Recall: 0.285260 Precision: 0.028526 NDCG: 0.162445 HR:0.285260
+Eval costs: 0.250717 s
+Iter 18...	Training loss: 242.132233  in 4.22s 
+Top-1 Recall: 0.067869 Precision: 0.067869 NDCG: 0.067869 HR:0.067869
+Top-5 Recall: 0.174973 Precision: 0.034995 NDCG: 0.124250 HR:0.174973
+Top-10 Recall: 0.276776 Precision: 0.027678 NDCG: 0.156793 HR:0.276776
+Eval costs: 0.394761 s
+############################################### 
+n_negative=4  
+batch_size=64 
+embed_dim=8 
+############################################### 
+Iter 1...	Training loss: 396.493378  in 1.91s 
+Top-1 Recall: 0.021209 Precision: 0.021209 NDCG: 0.021209 HR:0.021209
+Top-5 Recall: 0.067869 Precision: 0.013574 NDCG: 0.043873 HR:0.067869
+Top-10 Recall: 0.114528 Precision: 0.011453 NDCG: 0.058909 HR:0.114528
+Eval costs: 0.138468 s
+Iter 2...	Training loss: 362.325378  in 1.79s 
+Top-1 Recall: 0.020148 Precision: 0.020148 NDCG: 0.020148 HR:0.020148
+Top-5 Recall: 0.071050 Precision: 0.014210 NDCG: 0.045194 HR:0.071050
+Top-10 Recall: 0.125133 Precision: 0.012513 NDCG: 0.062459 HR:0.125133
+Eval costs: 0.120319 s
+Iter 3...	Training loss: 320.408630  in 1.80s 
+Top-1 Recall: 0.021209 Precision: 0.021209 NDCG: 0.021209 HR:0.021209
+Top-5 Recall: 0.081654 Precision: 0.016331 NDCG: 0.051667 HR:0.081654
+Top-10 Recall: 0.144221 Precision: 0.014422 NDCG: 0.071788 HR:0.144221
+Eval costs: 0.121322 s
+Iter 4...	Training loss: 301.697205  in 1.77s 
+Top-1 Recall: 0.037116 Precision: 0.037116 NDCG: 0.037116 HR:0.037116
+Top-5 Recall: 0.117709 Precision: 0.023542 NDCG: 0.077281 HR:0.117709
+Top-10 Recall: 0.170732 Precision: 0.017073 NDCG: 0.094541 HR:0.170732
+Eval costs: 0.122326 s
+Iter 5...	Training loss: 283.713104  in 1.75s 
+Top-1 Recall: 0.050901 Precision: 0.050901 NDCG: 0.050901 HR:0.050901
+Top-5 Recall: 0.138918 Precision: 0.027784 NDCG: 0.094501 HR:0.138918
+Top-10 Recall: 0.209968 Precision: 0.020997 NDCG: 0.117722 HR:0.209968
+Eval costs: 0.125333 s
+Iter 6...	Training loss: 249.680267  in 1.78s 
+Top-1 Recall: 0.051962 Precision: 0.051962 NDCG: 0.051962 HR:0.051962
+Top-5 Recall: 0.161188 Precision: 0.032238 NDCG: 0.106981 HR:0.161188
+Top-10 Recall: 0.224814 Precision: 0.022481 NDCG: 0.127395 HR:0.224814
+Eval costs: 0.131348 s
+Iter 7...	Training loss: 324.436157  in 1.82s 
+Top-1 Recall: 0.058324 Precision: 0.058324 NDCG: 0.058324 HR:0.058324
+Top-5 Recall: 0.165429 Precision: 0.033086 NDCG: 0.113335 HR:0.165429
+Top-10 Recall: 0.236479 Precision: 0.023648 NDCG: 0.136042 HR:0.236479
+Eval costs: 0.128341 s
+############################################### 
+n_negative=4  
+batch_size=64 
+embed_dim=8 
+############################################### 
+Iter 1...	Training loss: 295.371582  in 1.89s 
+Top-1 Recall: 0.021209 Precision: 0.021209 NDCG: 0.021209 HR:0.021209
+Top-5 Recall: 0.071050 Precision: 0.014210 NDCG: 0.045705 HR:0.071050
+Top-10 Recall: 0.114528 Precision: 0.011453 NDCG: 0.059390 HR:0.114528
+Eval costs: 0.147387 s

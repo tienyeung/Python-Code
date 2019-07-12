@@ -1,0 +1,106 @@
+################### lastfm ###################
+################### lastfm ###################
+scale=0.010000  
+Test Recall@1: 0.0518 
+Test Recall@5: 0.1453 
+Test NDCG@5: 0.0996 
+Test NDCG@10: 0.1171 
+scale=0.100000  
+Test Recall@1: 0.0174 
+Test Recall@5: 0.0613 
+Test NDCG@5: 0.0392 
+Test NDCG@10: 0.0495 
+scale=1.000000  
+Test Recall@1: 0.0666 
+Test Recall@5: 0.1770 
+Test NDCG@5: 0.1222 
+Test NDCG@10: 0.1441 
+scale=10.000000  
+Test Recall@1: 0.0597 
+Test Recall@5: 0.1701 
+Test NDCG@5: 0.1158 
+Test NDCG@10: 0.1361 
+################### ml-1m ###################
+scale=0.010000  
+Test Recall@1: 0.0137 
+Test Recall@5: 0.0555 
+Test NDCG@5: 0.0349 
+Test NDCG@10: 0.0462 
+scale=0.100000  
+Test Recall@1: 0.0434 
+Test Recall@5: 0.1368 
+Test NDCG@5: 0.0907 
+Test NDCG@10: 0.1140 
+scale=1.000000  
+Test Recall@1: 0.0437 
+Test Recall@5: 0.1295 
+Test NDCG@5: 0.0873 
+Test NDCG@10: 0.1118 
+scale=10.000000  
+Test Recall@1: 0.0434 
+Test Recall@5: 0.1281 
+Test NDCG@5: 0.0866 
+Test NDCG@10: 0.1119 
+################### citeulike ###################
+scale=0.010000  
+Test Recall@1: 0.0266 
+Test Recall@5: 0.0730 
+Test NDCG@5: 0.0503 
+Test NDCG@10: 0.0618 
+scale=0.100000  
+Test Recall@1: 0.0345 
+Test Recall@5: 0.0976 
+Test NDCG@5: 0.0663 
+Test NDCG@10: 0.0786 
+scale=1.000000  
+Test Recall@1: 0.0417 
+Test Recall@5: 0.1095 
+Test NDCG@5: 0.0758 
+Test NDCG@10: 0.0902 
+scale=10.000000  
+Test Recall@1: 0.0403 
+Test Recall@5: 0.1086 
+Test NDCG@5: 0.0744 
+Test NDCG@10: 0.0892 
+################### andriod_app ###################
+scale=0.010000  
+Test Recall@1: 0.0285 
+Test Recall@5: 0.0899 
+Test NDCG@5: 0.0595 
+Test NDCG@10: 0.0740 
+scale=0.100000  
+Test Recall@1: 0.0286 
+Test Recall@5: 0.0818 
+Test NDCG@5: 0.0556 
+Test NDCG@10: 0.0682 
+scale=1.000000  
+Test Recall@1: 0.0312 
+Test Recall@5: 0.0882 
+Test NDCG@5: 0.0601 
+Test NDCG@10: 0.0731 
+scale=10.000000  
+Test Recall@1: 0.0313 
+Test Recall@5: 0.0879 
+Test NDCG@5: 0.0600 
+Test NDCG@10: 0.0731 
+################### ml-100k ###################
+scale=0.010000  
+Test Recall@1: 0.0106 
+Test Recall@5: 0.0636 
+Test NDCG@5: 0.0364 
+Test NDCG@10: 0.0513 
+scale=0.100000  
+Test Recall@1: 0.0435 
+Test Recall@5: 0.1410 
+Test NDCG@5: 0.0909 
+Test NDCG@10: 0.1233 
+scale=1.000000  
+Test Recall@1: 0.0403 
+Test Recall@5: 0.1432 
+Test NDCG@5: 0.0922 
+Test NDCG@10: 0.1220 
+scale=10.000000  
+Test Recall@1: 0.0445 
+Test Recall@5: 0.1410 
+Test NDCG@5: 0.0928 
+Test NDCG@10: 0.1243 
