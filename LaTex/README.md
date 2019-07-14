@@ -47,8 +47,7 @@ LaTeX 会将浮动体与文本流分离，而后按照位置描述符，根据�
 
 [一份其实很短的LaTex入门文档](https://liam.page/2014/09/08/latex-introduction/)
 
-[浮动体是什么]([https://liam.page/series/#LaTeX-%E4%B8%AD%E7%9A%84%E6%B5%AE%E5%8A%A8%E4%BD%93](https://liam.page/series/#LaTeX-中的浮动体))
-
-[LaTex黑魔法]([https://liam.page/series/#LaTeX-%E9%BB%91%E9%AD%94%E6%B3%95](https://liam.page/series/#LaTeX-黑魔法))
+[浮动体是什么](https://liam.page/2017/03/11/floats-in-LaTeX-basic/)
 
 [LaTex开源小屋](http://www.latexstudio.net/)
+
