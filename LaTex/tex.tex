@@ -1,0 +1,116 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{amsmath}
+\usepackage{graphicx}
+%版面
+\usepackage{geometry}
+\geometry{left=1cm,right=2cm,top=3cm,bottom=4cm}
+%页眉页脚
+\usepackage{fancyhdr}
+%间距
+\usepackage{setspace}
+\onehalfspacing%行
+\addtolength{\parskip}{.4em}%段
+
+
+\title{Learn \LaTeX}
+\author{yeung}
+\date{\today}
+
+\pagestyle{fancy}
+\lhead{\author}
+\chead{\date}
+\rhead{\LaTeX}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headwidth}{\textwidth}
+\renewcommand{\footrulewidth}{0pt}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+\section{hello,china}
+china is a great country!
+
+and it's beautiful ,too!
+\subsection{hello,beijing}
+beijing is a good province!
+\subsubsection{hello,chaoyang}
+\paragraph{chaoyang}
+people are great!
+\subparagraph{chaoyang}
+people are happy!
+\subsection{hello,sichuan}
+\paragraph{sichuan}是天府之国
+\section{equation}
+\subsection{inline}
+这是一个$F=ma$公式,这\[E=mc^2\]也是。瞧瞧这个$\sqrt{x}$ 以及\[\frac{1}{2}\]
+\subsection{display}
+%有编号的公式
+\begin{equation}
+z=r\cdot e^{2\pi i}
+\end{equation}
+\begin{equation}
+    E=hv
+\end{equation}
+\subsection{大型公式}
+\[\sum_{i=1}^n i \prod_{i=1}^n \]
+\[\sum\limits _{i=1}^n i\quad \prod\limits _{i=1}^n \]
+\[lim_{x\to0}x^2 \quad \int_a^b x^2 dx \]
+\subsection{省略号}
+\[ x_1,x_2,\dots ,x_n\quad 1,2,\cdots ,n\quad
+\vdots\quad \ddots \]
+\subsection{括号}
+$\Bigl(\bigl((x)\bigr)\Bigr)$
+\subsection{矩阵}
+\[ \begin{pmatrix} a&b\\c&d \end{pmatrix} \quad
+\begin{bmatrix} a&b\\c&d \end{bmatrix} \quad
+\begin{Bmatrix} a&b\\c&d \end{Bmatrix} \quad
+\begin{vmatrix} a&b\\c&d \end{vmatrix} \quad
+\begin{Vmatrix} a&b\\c&d \end{Vmatrix} \]
+and I have a little matrix here:$(\begin{smallmatrix} a&b\\c&d 
+\end{smallmatrix}) $
+\subsection{多行公式}
+%公式组
+\begin{gather}
+    a = b+c+d \\
+    x = y+z
+\end{gather}
+\begin{align}
+    a &= b+c+d \\
+    x &= y+z
+\end{align}
+%分段函数
+\[ y= \begin{cases}
+    -x,\quad x\leq 0 \\
+    x,\quad x>0
+\end{cases} \]
+\section{photo and table}
+\subsection{photo}
+\paragraph{like this}
+\includegraphics[width=.8\textwidth]{cat.jpg}
+\subsection{table}
+\begin{tabular}{||l|c|r||}
+    \hline
+   操作系统& 发行版& 编辑器\\
+    \hline\hline
+   Windows & MikTeX & TexMakerX \\
+    \hline
+   Unix/Linux & teTeX & Kile \\
+    \hline
+   Mac OS & MacTeX & TeXShop \\
+    \hline
+   通用& TeX Live & TeXworks \\
+    \hline
+\end{tabular}
+\subsection{float}
+%htbp:here,top,bottom,float page
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.8\textwidth]{cat.jpg}
+    \caption{小猫猫}
+    \label{fig:cutecat}
+\end{figure}
+\end{document}

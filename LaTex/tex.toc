@@ -1,0 +1,20 @@
+\contentsline {section}{\numberline {1}hello,china}{2}% 
+\contentsline {subsection}{\numberline {1.1}hello,beijing}{2}% 
+\contentsline {subsubsection}{\numberline {1.1.1}hello,chaoyang}{2}% 
+\contentsline {paragraph}{chaoyang}{2}% 
+\contentsline {subparagraph}{chaoyang}{2}% 
+\contentsline {subsection}{\numberline {1.2}hello,sichuan}{2}% 
+\contentsline {paragraph}{sichuan}{2}% 
+\contentsline {section}{\numberline {2}equation}{2}% 
+\contentsline {subsection}{\numberline {2.1}inline}{2}% 
+\contentsline {subsection}{\numberline {2.2}display}{2}% 
+\contentsline {subsection}{\numberline {2.3}大型公式}{3}% 
+\contentsline {subsection}{\numberline {2.4}省略号}{3}% 
+\contentsline {subsection}{\numberline {2.5}括号}{3}% 
+\contentsline {subsection}{\numberline {2.6}矩阵}{3}% 
+\contentsline {subsection}{\numberline {2.7}多行公式}{3}% 
+\contentsline {section}{\numberline {3}photo and table}{4}% 
+\contentsline {subsection}{\numberline {3.1}photo}{4}% 
+\contentsline {paragraph}{like this}{4}% 
+\contentsline {subsection}{\numberline {3.2}table}{4}% 
+\contentsline {subsection}{\numberline {3.3}float}{4}% 
