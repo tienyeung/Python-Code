@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ############################################### 
 batch_size=4 
 ############################################### 
@@ -38,3 +39,45 @@ Iter 11...	Training: 14.71s loss: 29855.673713 Test:0.845249s MAE: 0.718842 MSE:
 Iter 12...	Training: 14.77s loss: 28997.926578 Test:0.870315s MAE: 0.721455 MSE: 0.873565 RMSE: 0.934647 
 Iter 13...	Training: 14.69s loss: 28325.388544 Test:0.811157s MAE: 0.721447 MSE: 0.871324 RMSE: 0.933448 
 Iter 14...	Training: 15.48s loss: 27667.578496 Test:0.849260s MAE: 0.723926 MSE: 0.880685 RMSE: 0.938448 
+=======
+############################################### 
+batch_size=4 
+############################################### 
+batch_size=4 
+############################################### 
+batch_size=4 
+embed_dim=8 
+############################################### 
+Iter 1...	Training: 14.69s loss: 174323.511960 Test:0.803136s MAE: 0.807005 MSE: 1.088414 RMSE: 1.043271 
+Iter 2...	Training: 14.29s loss: 40827.208794 Test:0.821184s MAE: 0.758616 MSE: 0.951931 RMSE: 0.975669 
+Iter 3...	Training: 14.23s loss: 37425.573440 Test:0.810154s MAE: 0.754489 MSE: 0.940522 RMSE: 0.969805 
+Iter 4...	Training: 14.27s loss: 36601.938586 Test:0.810154s MAE: 0.745053 MSE: 0.923005 RMSE: 0.960732 
+Iter 5...	Training: 14.81s loss: 35952.742043 Test:0.822187s MAE: 0.745271 MSE: 0.913058 RMSE: 0.955541 
+Iter 6...	Training: 14.84s loss: 35040.594702 Test:0.979606s MAE: 0.742865 MSE: 0.911145 RMSE: 0.954539 
+Iter 7...	Training: 14.44s loss: 34025.852895 Test:0.829206s MAE: 0.735533 MSE: 0.894058 RMSE: 0.945546 
+Iter 8...	Training: 16.13s loss: 32860.814633 Test:0.888362s MAE: 0.729253 MSE: 0.883639 RMSE: 0.940021 
+Iter 9...	Training: 16.39s loss: 31880.714630 Test:0.898389s MAE: 0.728307 MSE: 0.884583 RMSE: 0.940523 
+Iter 10...	Training: 18.16s loss: 31034.194575 Test:1.025666s MAE: 0.724228 MSE: 0.872970 RMSE: 0.934328 
+Iter 11...	Training: 19.45s loss: 30185.299873 Test:1.030740s MAE: 0.720253 MSE: 0.871773 RMSE: 0.933688 
+Iter 12...	Training: 19.97s loss: 29413.626141 Test:1.089897s MAE: 0.721232 MSE: 0.875849 RMSE: 0.935868 
+############################################### 
+batch_size=4 
+############################################### 
+batch_size=4 
+embed_dim=8 
+############################################### 
+Iter 1...	Training: 15.67s loss: 159043.730996 Test:0.891370s MAE: 0.800573 MSE: 1.067233 RMSE: 1.033070 
+Iter 2...	Training: 16.76s loss: 40190.265718 Test:1.214229s MAE: 0.757411 MSE: 0.947694 RMSE: 0.973496 
+Iter 3...	Training: 16.35s loss: 37216.937839 Test:0.840235s MAE: 0.753390 MSE: 0.937382 RMSE: 0.968185 
+Iter 4...	Training: 15.86s loss: 36442.894560 Test:0.904405s MAE: 0.743389 MSE: 0.918838 RMSE: 0.958560 
+Iter 5...	Training: 14.35s loss: 35723.961873 Test:0.818176s MAE: 0.741243 MSE: 0.903759 RMSE: 0.950663 
+Iter 6...	Training: 15.27s loss: 34688.547190 Test:0.897408s MAE: 0.737628 MSE: 0.898051 RMSE: 0.947656 
+Iter 7...	Training: 16.28s loss: 33739.462514 Test:0.863297s MAE: 0.730479 MSE: 0.883427 RMSE: 0.939908 
+Iter 8...	Training: 15.29s loss: 32723.131287 Test:0.828204s MAE: 0.725402 MSE: 0.876086 RMSE: 0.935995 
+Iter 9...	Training: 14.84s loss: 31787.403465 Test:0.846250s MAE: 0.724419 MSE: 0.873923 RMSE: 0.934839 
+Iter 10...	Training: 14.83s loss: 30832.358265 Test:0.977600s MAE: 0.720667 MSE: 0.864630 RMSE: 0.929855 
+Iter 11...	Training: 14.71s loss: 29855.673713 Test:0.845249s MAE: 0.718842 MSE: 0.866015 RMSE: 0.930599 
+Iter 12...	Training: 14.77s loss: 28997.926578 Test:0.870315s MAE: 0.721455 MSE: 0.873565 RMSE: 0.934647 
+Iter 13...	Training: 14.69s loss: 28325.388544 Test:0.811157s MAE: 0.721447 MSE: 0.871324 RMSE: 0.933448 
+Iter 14...	Training: 15.48s loss: 27667.578496 Test:0.849260s MAE: 0.723926 MSE: 0.880685 RMSE: 0.938448 
+>>>>>>> 0fce27345cedc18c1b94ea16f39966eda8d097a9
