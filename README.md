@@ -99,8 +99,6 @@ HEAD，它指向的是最新的提交。而上一次的提交就是 HEAD^，上�
 
 > git reset --hard 15547（不必输全）
 
-<<<<<<< HEAD
-=======
 ## 多地管理
 
 1. 把项目clone到本地
@@ -118,20 +116,14 @@ HEAD，它指向的是最新的提交。而上一次的提交就是 HEAD^，上�
 
 > git remote add origin 仓库网址
 
->>>>>>> 0fce27345cedc18c1b94ea16f39966eda8d097a9
 ## 常见问题
 
 [解决github permission denied(publickey)问题](<https://www.jianshu.com/p/f22d02c7d943>)
 
 [git批量提交和删除](<https://blog.csdn.net/pan0755/article/details/78460149>)
 
-<<<<<<< HEAD
-=======
 [多地管理github账号](https://blog.csdn.net/xingkong_hdc/article/details/79484518)
 
-
-
->>>>>>> 0fce27345cedc18c1b94ea16f39966eda8d097a9
 ## 参考
 
 [Github 入门](<https://www.jianshu.com/p/38611735b15e>)
