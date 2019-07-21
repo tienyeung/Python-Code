@@ -1,5 +1,7 @@
 \documentclass[UTF8,10pt,titlepage,a4paper]{ctexart}
 \usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\hypersetup{hidelinks}
 \usepackage{listings}
 \usepackage{xcolor}
 \usepackage{dirtree}
@@ -84,6 +86,15 @@
 \item 字符识别即对分割字符进行字符串化输出，一般可基于神经网络,支持向量机，开放api等方式进行
 识别。
 \end{enumerate}
+\begin{itemize}
+  \item[*] \textbf{流程图} \\
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=.6\textwidth]{flow.jpg}
+    \caption{流程图}
+  \end{figure}  
+\end{itemize}
+
 \section{实验内容}
 \subsection{实验环境}
 \begin{itemize}
@@ -130,7 +141,7 @@
 \subsection{核心代码}
 本项目仍然是按照车牌识别系统的一般步骤进行，即图像预处理，车牌定位，字符分割及字符识别。
 \subsubsection{图像预处理}
-图像预处理即是对图像进行简单的去噪，转换灰度图等操作。\\
+图像预处理即是对图像进行简单的去噪，转换灰度图等操作。
 \begin{lstlisting}[language=python]
 blur = self.cfg["blur"]
 if blur > 0:
@@ -138,7 +149,6 @@ if blur > 0:
 oldimg = img
 img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 \end{lstlisting}
-\newpage
 \verb|cv2.GaussianBlur|实现的是高斯模糊，其本质上是低通滤波器，输出图像的每个像素点是原图像上对应像素点
 与周围像素点的加权和。高斯滤波的卷积核权重并不相同，中间像素点权重最高，越远离中心的像素权重越小高斯滤波
 相比均值滤波效率要慢，但可以有效消除高斯噪声，能保留更多的图像细节。\verb|cvtColor|则是进行图像空间转换，
@@ -216,18 +226,109 @@ part_cards = seperate_card(gray_img, wave_peaks)
 6个，以期分割车牌上的字符。行[4-17]则为在判断波峰是否为左边缘的前提下分离字符。最后根据自定义函数\verb|seperate_card|分割，
 返回分割后图片。
 \subsubsection{字符识别}
-
-
-
-
-
-
-
-
+为了能用SVM对图像进行分类，其输入的是描述图像的特征值。一般的方法是HOG+SVM，为介绍这个方法，在此对HOG做出作出解释：
+\begin{itemize}
+  \item[*] \textbf{HOG}\\
+  方向梯度直方图（Histogram of Oriented Gradient, HOG）特征是一种在计算机视觉和图像处理中用来进行物体检测的特征描述子。
+  它通过计算和统计图像局部区域的梯度方向直方图来构成特征。在一副图像中，局部目标的表象和形状能够被梯度或边缘的方向密度
+  分布很好地描述。HOG实现的方法是首先将图像分成小的连通区域，我们把它叫细胞单元。然后采集细胞单元中各像素点的梯度的或边缘的方向直方图。
+  最后把这些直方图组合起来就可以构成特征描述器。
+\end{itemize}
+具体的代码可见下：
+\begin{lstlisting}[language=python]
+def deskew(img):
+m = cv2.moments(img)
+if abs(m['mu02']) < 1e-2:
+	return img.copy()
+skew = m['mu11']/m['mu02']
+M = np.float32([[1, skew, -0.5*SZ*skew], [0, 1, 0]])
+img = cv2.warpAffine(img, M,
+   (SZ, SZ), flags=cv2.WARP_INVERSE_MAP | cv2.INTER_LINEAR)
+return img
+\end{lstlisting} 
+这段代码是对图像进行二阶矩校正，为下一步做准备。
+\newpage
+\begin{lstlisting}[language=python]
+def preprocess_hog(digits):
+samples = []
+for img in digits:
+	gx = cv2.Sobel(img, cv2.CV_32F, 1, 0)
+	gy = cv2.Sobel(img, cv2.CV_32F, 0, 1)
+	mag, ang = cv2.cartToPolar(gx, gy)
+	bin_n = 16
+	bin = np.int32(bin_n*ang/(2*np.pi))
+	bin_cells = bin[:10,:10], bin[10:,:10], bin[:10,10:], bin[10:,10:]
+	mag_cells = mag[:10,:10], mag[10:,:10], mag[:10,10:], mag[10:,10:]
+  hists = [np.bincount(b.ravel(), m.ravel(), bin_n) 
+            for b, m in zip(bin_cells, mag_cells)]
+	hist = np.hstack(hists)
+  # transform to Hellinger kernel
+	eps = 1e-7
+	hist /= hist.sum() + eps
+	hist = np.sqrt(hist)
+	hist /= norm(hist) + eps
+	samples.append(hist)
+	return np.float32(samples)
+\end{lstlisting} 
+这段代码较为重要，因此我将HOG的函数表达全部摘录于此，以期做详细的介绍。要找到每个单元格的HOG描述符，就要在X和Y方
+向上找到每个单元的Sobel导数，然后在每个像素处找到它们的大小和梯度方向，该梯度量化为16个整数值，将此图像分为四个子方块，对于
+每个子平方，计算方向的直方图（16个区间），用它们的大小加权，因此每个子方格都会为您提供一个包含16个值的向量，四个这样的
+矢量（四个子方块）一起给出了包含64个值的特征向量，这是我们用来训练数据的特征向量。于是便可以用此函数对图像进行处理，送入SVM
+进行训练了。\\
+之后便可调用SVM类\footnote{openCv自带SVM模型，可直接调用}，只需输入相应参数，便可以将进行训练了。
 \subsection{图形界面}
+
+\begin{enumerate}
+  \item \textbf{主界面}\\
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=.8\textwidth]{ui.png}
+    \caption{主界面}
+  \end{figure}\\
+为了简化步骤，此项目只是简单的用Tkinter来绘制前端页面，可见此前端可调取两个来源，分别是摄像头
+以及本机图片；左边空白处显示选取的图片，右上角返回定位到的车牌区域以及识别结果。
+此处只展示界面，代码详情可见文件\emph{surface.py}内。
+  \item \textbf{运行界面}\\
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=.8\textwidth]{run.png}
+    \caption{运行界面}
+  \end{figure}\par
+当选取了一张图片后，图片会展示在界面左端，右上角展示车牌及其结果，此次只是一次简单的测试，并不适用
+于任何图片，其正确与否与图片的质量，光照环境，清晰度，拍摄角度有关，但一般来说能够识别出大部分图片，
+但准确率仍有提高的空间。
+\end{enumerate}
+\newpage
 \section{总结}
-\section{参考文献}
-% \bibliography{book}
+此次实验是基于github上的项目改造而来\footnote{https://github.com/yinghualuowu},在作者优秀的
+代码基础上，我加上了部分我的修改与理解。此项目结合了图像处理及机器学习相关知识，在阅读及修改
+代码的过程中，我感到受益匪浅。此项目的图像处理内容基于opencv库，opencv封装了大量图像处理方面的
+算法及工具，比如\emph{形态学}方面的\verb|cv2.morphologyEx|及涉及到仿射变换的\verb|cv2.warpAffine|
+等函数接口，也基于此我也学习到了直方图，仿射变换，形态学的开闭运算及图像处理中的高斯去噪及阈值化
+等诸多知识点，填补了我在此方面的空白。\par
+同时，SVM和HOG让我学习到了图像处理及机器学习的结合，HOG是对图像特征的提取，SVM是对图像的分类，
+前者提供的特征量是对后者的输入。二者结合，就能准确对车牌信息进行识别。\par
+此次实验仍然存在诸多不足：
+\begin{itemize}
+  \item 少部分图像有无法识别的现象，原因可能出自客观环境，比如图片质量不佳及拍摄角度过大等，也
+  可能是算法本身的问题，比如仿射变换算法的不完善，定位算法的不精确等。
+  \item 未能通过大量的实验来计算本系统的各方面性能。
+\end{itemize}
+总的来说，此次实验让我对\emph{图像处理与计算机视觉}这门课程有了更深入的认识。
+\newpage
+\begin{thebibliography}{99}
+    \bibitem{1} \href{https://blog.csdn.net/qq878594585/article/details/81838260}{cv2.warpAffine参数详解}\footnote{可点击文献名直接跳转网址}
+    \bibitem{2} \href{https://blog.csdn.net/GDFSG/article/details/51015066}{图像的几何矩}
+    \bibitem{3} \href{https://blog.csdn.net/liulina603/article/details/8291093}{目标检测的图像特征提取之（一）HOG特征}
+    \bibitem{4} \href{https://zhuanlan.zhihu.com/p/48200186}{opencv实战从0到N （13）—— svm分类器训练}
+    \bibitem{5} \href{https://blog.csdn.net/sinat_34604992/article/details/53933004}{Opencv之HOG特征与SVM相结合的人体检测}
+    \bibitem{6} \href{https://www.jianshu.com/p/ef67cacf442c}{图像翻转，平移，仿射及透视 warpAffine}
+    \bibitem{7} \href{https://blog.csdn.net/qq_24237837/article/details/77850496}{python-opencv 的minAreaRect的详解}
+    \bibitem{8} \href{https://www.cnblogs.com/my-love-is-python/p/10397482.html}{canny边缘检测}
+    \bibitem{9} \href{https://www.cnblogs.com/yinliang-liang/p/9293310.html}{二值化的cv2.threshold}
+    \bibitem{10} \href{https://blog.csdn.net/zh_jessica/article/details/77992578}{Python-OpenCV 图像叠加or图像混合加权实现}
+    \bibitem{11} \href{https://blog.csdn.net/sunny2038/article/details/9137759}{OpenCV-Python教程-形态学处理）}
+\end{thebibliography}
 \end{document}
 
 
