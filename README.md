@@ -26,7 +26,7 @@
 
 第五步:输入远程地址
 
-> $ git remote add origin https:*//github.com/itmyhome2013/mygithub.git*
+> $ git remote add origin https:*//github.com/yeungtien/...*
 
 *#origin 是默认远程仓库标识*
 
@@ -106,15 +106,23 @@ HEAD，它指向的是最新的提交。而上一次的提交就是 HEAD^，上�
 
 > git init
 
-3. 生成ssh密钥并添加到setting
+ 3.配置邮箱
 
-> ssh-keygen -t rsa -C 'your email'
+> git config --global user.email "yeungtien@gmail.com"
+
+4.1 生成ssh密钥并添加到setting(用于ssh clone)
+
+> ssh-keygen -t rsa -C 'yeungtien@gmail.com'
 
 将生成的id_rsa.pub中的密钥添加到自己账户
 
-4. 设置远端仓库
+4.2 提交无需密码(用于https clone)
 
-> git remote add origin 仓库网址
+> git config --global credential.helper store
+
+4.3 更改协议
+
+> git remote set-url origin git@github.com:yourusername/yourrepositoryname.git
 
 ## 常见问题
 
