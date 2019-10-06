@@ -110,6 +110,10 @@ HEAD，它指向的是最新的提交。而上一次的提交就是 HEAD^，上�
 
 > git config --global user.email "yeungtien@gmail.com"
 
+3.1 配置origin
+
+> git remote add origin https://github.com/tienyeung/leetcode
+
 4.1 生成ssh密钥并添加到setting(用于ssh clone)
 
 > ssh-keygen -t rsa -C 'yeungtien@gmail.com'
